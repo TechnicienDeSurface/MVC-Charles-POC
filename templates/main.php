@@ -296,7 +296,7 @@ if (!isset($_SESSION)) {
                                 <?php if ($media['type_media'] === 'book'): ?>
                                     <td class="py-3 px-4">
                                         <a href="../templates/book/edit.php?id=<?= $media['id'] ?>">Modifier</a>
-                                        <a href="../templates/book/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
+                                        <a href="../templates/actions/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
                                         <?php if ($media['disponible']): ?>
                                             <a href="../templates/book/borrow.php?id=<?= $media['id'] ?>">Emprunter</a>
                                         <?php else: ?>
@@ -306,7 +306,7 @@ if (!isset($_SESSION)) {
                                 <?php elseif ($media['type_media'] === 'album'): ?>
                                     <td class="py-3 px-4">
                                         <a href="../templates/album/edit.php?id=<?= $media['id'] ?>">Modifier</a>
-                                        <a href="../templates/album/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
+                                        <a href="../templates/actions/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
                                         <?php if ($media['disponible']): ?>
                                             <a href="../templates/album/borrow.php?id=<?= $media['id'] ?>">Emprunter</a>
                                         <?php else: ?>
@@ -316,7 +316,7 @@ if (!isset($_SESSION)) {
                                 <?php elseif ($media['type_media'] === 'movie'): ?>
                                     <td class="py-3 px-4">
                                         <a href="../templates/movie/edit.php?id=<?= $media['id'] ?>">Modifier</a>
-                                        <a href="../templates/movie/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
+                                        <a href="../templates/actions/delete.php?id=<?= $media['id'] ?>">Supprimer</a>
                                         <?php if ($media['disponible']): ?>
                                             <a href="../templates/movie/borrow.php?id=<?= $media['id'] ?>">Emprunter</a>
                                         <?php else: ?>

@@ -1,10 +1,19 @@
 <?php
 
-include '../config/config.php';
+require '../../config/config.php';
 
-session_start();
+$pdo = connectBD();
 
-if (isset($_SESSION)) {
-    header("Location: ../index.php");
-    exit();
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+    $stmt = $pdo->prepare("DELETE FROM media WHERE id = :id");
+    $ok = $stmt->execute(['id' => $id]);
+    if ($ok) {
+        header("Location: ../main.php");
+        exit;
+    }
+} else {
+    header("Location: ../main.php");
+    exit;
 }
